@@ -1,0 +1,17 @@
+<div class="digits"> 
+  <span>{{ counterService.counterState$ |async|json|jsonValue:"count"|json|jsonValue:"hh" }}</span>
+    :
+  <span>{{ counterService.counterState$ |async|json|jsonValue:"count"|json|jsonValue:"mm" }}</span>
+    :
+  <span>{{ counterService.counterState$ |async |json|jsonValue:"count"|json|jsonValue:"ss" }}</span>
+</div>
+<div class="controllers">
+  <button startController>
+    <ng-container *ngIf="counterService.counterState$ |async|json|jsonValue:'isTicking'; else start">
+      Stop
+    </ng-container>
+    <ng-template #start>Start</ng-template>
+  </button>
+  <button waitBtnController>Wait</button>
+  <button resetBtnControllers>Reset</button>
+</div>

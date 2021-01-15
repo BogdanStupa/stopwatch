@@ -1,0 +1,53 @@
+$backround-color:  rgb(1, 1, 218);
+$color: rgb(0, 17, 54);
+$digit-backround-color: rgb(171, 37, 238);
+$digit-shadow-color: rgb(74, 49, 87);
+$btn-backround-color: rgb(0, 17, 54);
+
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $backround-color;
+  padding: 2rem;
+  border-radius: 2rem;
+  color: $color;
+
+  .digits {
+    display: flex;
+    font-size: 7rem;
+    align-items: center;
+
+    span {
+      padding: 1rem 0;
+      border-radius: 2rem;
+      letter-spacing: .005rem;
+      background-color: $digit-backround-color;
+      box-shadow: 12px 29px 81px 0px $digit-shadow-color;
+    }
+  }
+
+  .controllers {
+    margin-top: 1rem;
+    display: flex;
+
+    button {
+      padding: .5rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: $btn-backround-color;
+      border-radius: .5rem;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 600;
+
+      &:not(:first-child){
+        margin-left: 1rem;
+      }
+
+      &:hover {
+        color: $digit-shadow-color;
+      }
+    }
+  }
+}
