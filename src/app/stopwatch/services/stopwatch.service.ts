@@ -26,7 +26,7 @@ export class StopwatchService {
       );
   }
 
-  public create(controllers: ControllersI){
+  public create(controllers: ControllersI):Observable<any> {
     const counterSubject = new Subject<Partial<CounterStateI>>();
 
     const counterCommands$ = merge(
